@@ -42,9 +42,9 @@
   },
 
 
-  // 给新增的留言一个随机的id
+  // 给新增的留言一个id---date
   generateId: function() {
-    return Math.floor(Math.random() * 9000) + 1000;
+    return Date.now();
   },
 
   // 新增留言
@@ -164,8 +164,6 @@ var MessageForm = React.createClass({
     }
 
     this.props.submitmessage({author: author, message: message});
-    this.setState({author: '', text: ''});
-    //this.props.submitmessage({author: author, message: message});
     ReactDOM.findDOMNode(this.refs.message).value = "";
     ReactDOM.findDOMNode(this.refs.author).value = "";
   },
