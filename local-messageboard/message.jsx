@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <title>Local Message List</title>  
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>    
-
-  </head>
-<body>
-  <div class="container">
-    <div id="MessageBox" class="col-md-6 col-md-offset-3">
-     </div>
-  </div>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
-    <script type="text/babel" >
 
   var converter = new Showdown.converter();
     var MessageBox = React.createClass({
@@ -128,9 +108,9 @@ var MessageItem = React.createClass({
         
         <div className="pull-right">
           <button type="button" className="btn btn-xs close" onClick={this.deletemessage} ref="deleteBtn">删除</button>
-          
+        	
         </div>
-        <br/>
+      	<br/>
       </li>
     );
   }
@@ -200,8 +180,3 @@ ReactDOM.render(
   <MessageBox />,
   document.getElementById('MessageBox')
 );
-</script>
-   
-  
-</body>
-</html>
